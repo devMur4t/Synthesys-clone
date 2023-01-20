@@ -105,6 +105,14 @@ header {
   grid-template-columns: 2fr 3fr;
 }
 
+.grid-custom--reviews {
+  grid-template-columns: 1fr 2fr;
+}
+
+.grid-custom--usage-areas {
+  grid-template-columns: 2fr 3fr;
+}
+
 .hero-desc {
   font-size: 2.4rem;
   color: #48cce5;
@@ -216,6 +224,10 @@ span {
   color: #fff;
 }
 
+.margin-bottom {
+  margin-bottom: 8rem;
+}
+
 .subheading-text-to-speach {
   color: #48cce5;
 }
@@ -234,6 +246,7 @@ span {
 .generator-list {
   list-style: none;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 4rem;
@@ -267,13 +280,29 @@ span {
   color: #fff;
 }
 
+.review-us {
+  position: relative;
+  padding-top: 8rem;
+}
+.review-us::before {
+  position: absolute;
+  content: "";
+  position: absolute;
+  background-color: #48cce5;
+  width: 6rem;
+  height: 4px;
+  top: 0;
+  left: 0;
+}
+
 .buttons {
   display: flex;
   align-items: center;
   gap: 2rem;
 }
 
-.btn {
+.carousel-btn {
+  cursor: pointer;
   padding: 2rem;
   border: none;
   background-color: transparent;
@@ -288,9 +317,158 @@ span {
   transition: all 0.3s;
 }
 
+.carousel-btn:hover {
+  background-color: #48cce5;
+  border-color: currentColor;
+  color: #000;
+}
+
 .btn-icon {
   width: 3rem;
   height: 3rem;
+}
+
+.review-box {
+  border: 3px solid #949eaa;
+  padding: 6.4rem 5.2rem;
+  margin-bottom: 3rem;
+}
+
+.review-text {
+  font-size: 1.8rem;
+  color: #949eaa;
+}
+
+.review-details {
+  padding-left: 5.2rem;
+  padding-right: 3.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-person {
+  display: flex;
+  align-items: center;
+}
+
+.reviewer-img {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.review-name {
+  font-size: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+.review-company {
+  font-size: 1.6rem;
+  color: #949eaa;
+}
+
+.review-date {
+  align-self: flex-end;
+  color: #949eaa;
+  font-size: 1.2rem;
+}
+
+/*
+  SECTION REVIEWS
+*/
+.section-usage-areas {
+  padding: 9.6rem 0;
+  background-color: #0a141d;
+}
+
+.usage-areas-desc {
+  color: #949eaa;
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.usage-areas {
+  place-content: end;
+  display: flex;
+  gap: 3.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.usage-areas-text {
+  position: relative;
+  padding-top: 8rem;
+}
+
+.usage-areas-text::before {
+  content: "";
+  position: absolute;
+  background-color: #48cce5;
+  width: 6rem;
+  height: 4px;
+  top: 0;
+  left: 0;
+}
+
+.usage-areas-icon {
+  width: 3.6rem;
+  height: 3.6rem;
+  stroke: #48cce5;
+}
+
+.more-text {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+/*
+  SECTION API
+*/
+.section-api {
+  padding: 9.6rem 0;
+  background-color: #48cce5;
+  color: #000;
+}
+
+.api-heading {
+  position: relative;
+  flex: 2 0 auto;
+}
+
+.api-heading::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background-color: red;
+}
+
+.color-black {
+  color: #000;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.heading-tertiary {
+  font-size: 2.4rem;
+}
+
+.api-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 7rem;
+}
+
+.api-desc {
+  color: #1b1c52;
+  font-size: 2rem;
+  line-height: 1.4;
 }
 
 /* -FONT SIZE SYSTEM(px)
