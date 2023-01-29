@@ -5,8 +5,35 @@ const silverPack = document.getElementById('silverPackPrice');
 const platPack = document.getElementById('platPackPrice');
 const diamondPack = document.getElementById('diamondPackPrice');
 
-const previousBtn = document.getElementById('previousRev');
-const nextBtn = document.getElementById('nextRev');
+const mobileToggle = document.getElementById('hamburger');
+
+mobileToggle.addEventListener('click', () => {
+  const mobileMenu = document.getElementById('mobile-Menu');
+  mobileMenu.classList.toggle('mobileToggle');
+
+})
+
+const buttons = document.querySelectorAll('[data-carousel-button]');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    console.log('hey');
+    const offset = button.dataset.carouselButton === 'next' ? 1 : -1
+    const slides = button.closest('[data-carousel]').querySelector('[data-slides]')
+
+    const activeSlide = slides.querySelector('[data-active]')
+    let newIndex = [...slides.children].indexOf(activeSlide) + offset
+
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
+
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+  })
+})
+
+
+
 
 const saveText = 'Save 20%';
 
@@ -61,43 +88,8 @@ faqs.forEach(faq => {
 })
 
 
-function carousel(review) {
-  console.log('danger');
-  let reviews = document.getElementsByClassName('reviews');
-  console.log(reviews);
 
-  if (review >= reviews.length) {
-    review = 0;
-    rev = 0;
-  }
-  else if (review < 0) {
-    review = reviews.length - 1;
-    rev = reviews.length - 1;
-  }
 
-  for (let i = 0; i < reviews.length; i++) {
-    reviews[i].style.display = 'none';
-  }
-  reviews[review].style.display = 'block';
-}
-
-function previousReview() {
-  rev = rev - 1;
-  carousel(rev);
-}
-
-function nextReview() {
-  rev = rev + 1;
-  carousel(rev);
-}
-
-previousBtn.addEventListener('click', () => {
-  previousReview();
-});
-
-nextBtn.addEventListener('click', () => {
-  nextReview();
-});
 
 
 

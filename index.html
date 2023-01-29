@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,6 +60,34 @@
           </ul>
 
           <a href="#" class="btn"> Login </a>
+
+          <!-- MOBILE -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="#fff"
+            class="icon hamburger"
+            id="hamburger"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+
+          <div class="mobile" id="mobile-Menu">
+            <ul class="mobile-list">
+              <li><a class="main-list-item" href="#">Home</a></li>
+              <li><a class="main-list-item" href="#">Al audio</a></li>
+              <li><a class="main-list-item" href="#">Al video</a></li>
+              <li><a class="main-list-item" href="#">Al avatars</a></li>
+              <li><a class="main-list-item" href="#">About us</a></li>
+              <li><a class="btn" href="#">Login</a></li>
+            </ul>
+          </div>
         </nav>
         <section class="section-hero">
           <div class="grid grid-col--2 grid-align--vertically">
@@ -393,7 +422,11 @@
           <h2 class="heading-secondary">REVIEWS</h2>
           <p class="subheading color-main margin-bottom">from our customers</p>
           <div class="buttons">
-            <button class="carousel-btn" id="previousRev">
+            <button
+              class="carousel-button"
+              id="previousRev"
+              data-carousel-button="prev"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -409,7 +442,11 @@
                 />
               </svg>
             </button>
-            <button class="carousel-btn" id="nextRev">
+            <button
+              class="carousel-button"
+              id="nextRev"
+              data-carousel-button="next"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -427,98 +464,122 @@
             </button>
           </div>
         </div>
-        <div id="reviews-container">
-          <div class="reviews">
-            <div class="review-box">
-              <p class="review-text">
-                Synthesys is mind blowing. The voices are as good as I usually
-                get from professional voiceover artist on Fiverr after paying
-                big bucks. The fact that it beats voices from Google and Amazon
-                is extraordinary. I highly recommend Synthesys, you'll never go
-                wrong with it.
-              </p>
-            </div>
 
-            <div class="review-details">
-              <div class="review-person">
-                <img class="reviewer-img" src="images/alice.jpg" alt="Alice" />
-                <div class="reviewer-information">
-                  <p class="review-name">Alice</p>
-                  <p class="review-company">Netflix</p>
+        <div class="carousel" data-carousel>
+          <ul data-slides>
+            <li class="slide" data-active>
+              <div class="reviews">
+                <div class="review-box">
+                  <p class="review-text">
+                    Synthesys is mind blowing. The voices are as good as I
+                    usually get from professional voiceover artist on Fiverr
+                    after paying big bucks. The fact that it beats voices from
+                    Google and Amazon is extraordinary. I highly recommend
+                    Synthesys, you'll never go wrong with it.
+                  </p>
+                </div>
+
+                <div class="review-details">
+                  <div class="review-person">
+                    <img
+                      class="reviewer-img"
+                      src="images/alice.jpg"
+                      alt="Alice"
+                    />
+                    <div class="reviewer-information">
+                      <p class="review-name">Alice</p>
+                      <p class="review-company">Netflix</p>
+                    </div>
+                  </div>
+                  <p class="review-date">Jan 2023</p>
                 </div>
               </div>
-              <p class="review-date">Jan 2023</p>
-            </div>
-          </div>
+            </li>
+            <li class="slide none">
+              <div class="reviews">
+                <div class="review-box">
+                  <p class="review-text">
+                    Synthesys is mind blowing. The voices are as good as I
+                    usually get from professional voiceover artist on Fiverr
+                    after paying big bucks. The fact that it beats voices from
+                    Google and Amazon is extraordinary. I highly recommend
+                    Synthesys, you'll never go wrong with it.
+                  </p>
+                </div>
 
-          <div class="reviews">
-            <div class="review-box">
-              <p class="review-text">
-                Synthesys is mind blowing. The voices are as good as I usually
-                get from professional voiceover artist on Fiverr after paying
-                big bucks. The fact that it beats voices from Google and Amazon
-                is extraordinary. I highly recommend Synthesys, you'll never go
-                wrong with it.
-              </p>
-            </div>
-
-            <div class="review-details">
-              <div class="review-person">
-                <img class="reviewer-img" src="images/alice.jpg" alt="Alice" />
-                <div class="reviewer-information">
-                  <p class="review-name">Alice</p>
-                  <p class="review-company">Netflix</p>
+                <div class="review-details">
+                  <div class="review-person">
+                    <img
+                      class="reviewer-img"
+                      src="images/alice.jpg"
+                      alt="Alice"
+                    />
+                    <div class="reviewer-information">
+                      <p class="review-name">Murat</p>
+                      <p class="review-company">Netflix</p>
+                    </div>
+                  </div>
+                  <p class="review-date">Jan 2023</p>
                 </div>
               </div>
-              <p class="review-date">Jan 2023</p>
-            </div>
-          </div>
+            </li>
+            <li class="slide none">
+              <div class="reviews">
+                <div class="review-box">
+                  <p class="review-text">
+                    Synthesys is mind blowing. The voices are as good as I
+                    usually get from professional voiceover artist on Fiverr
+                    after paying big bucks. The fact that it beats voices from
+                    Google and Amazon is extraordinary. I highly recommend
+                    Synthesys, you'll never go wrong with it.
+                  </p>
+                </div>
 
-          <div class="reviews">
-            <div class="review-box">
-              <p class="review-text">
-                Synthesys is mind blowing. The voices are as good as I usually
-                get from professional voiceover artist on Fiverr after paying
-                big bucks. The fact that it beats voices from Google and Amazon
-                is extraordinary. I highly recommend Synthesys, you'll never go
-                wrong with it.
-              </p>
-            </div>
-
-            <div class="review-details">
-              <div class="review-person">
-                <img class="reviewer-img" src="images/alice.jpg" alt="Alice" />
-                <div class="reviewer-information">
-                  <p class="review-name">Alice</p>
-                  <p class="review-company">Netflix</p>
+                <div class="review-details">
+                  <div class="review-person">
+                    <img
+                      class="reviewer-img"
+                      src="images/alice.jpg"
+                      alt="Alice"
+                    />
+                    <div class="reviewer-information">
+                      <p class="review-name">Harun</p>
+                      <p class="review-company">Netflix</p>
+                    </div>
+                  </div>
+                  <p class="review-date">Jan 2023</p>
                 </div>
               </div>
-              <p class="review-date">Jan 2023</p>
-            </div>
-          </div>
+            </li>
+            <li class="slide none">
+              <div class="reviews">
+                <div class="review-box">
+                  <p class="review-text">
+                    Synthesys is mind blowing. The voices are as good as I
+                    usually get from professional voiceover artist on Fiverr
+                    after paying big bucks. The fact that it beats voices from
+                    Google and Amazon is extraordinary. I highly recommend
+                    Synthesys, you'll never go wrong with it.
+                  </p>
+                </div>
 
-          <div class="reviews">
-            <div class="review-box">
-              <p class="review-text">
-                Synthesys is mind blowing. The voices are as good as I usually
-                get from professional voiceover artist on Fiverr after paying
-                big bucks. The fact that it beats voices from Google and Amazon
-                is extraordinary. I highly recommend Synthesys, you'll never go
-                wrong with it.
-              </p>
-            </div>
-
-            <div class="review-details">
-              <div class="review-person">
-                <img class="reviewer-img" src="images/alice.jpg" alt="Alice" />
-                <div class="reviewer-information">
-                  <p class="review-name">Alice</p>
-                  <p class="review-company">Netflix</p>
+                <div class="review-details">
+                  <div class="review-person">
+                    <img
+                      class="reviewer-img"
+                      src="images/alice.jpg"
+                      alt="Alice"
+                    />
+                    <div class="reviewer-information">
+                      <p class="review-name">Maria</p>
+                      <p class="review-company">Netflix</p>
+                    </div>
+                  </div>
+                  <p class="review-date">Jan 2023</p>
                 </div>
               </div>
-              <p class="review-date">Jan 2023</p>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

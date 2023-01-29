@@ -12,6 +12,7 @@ body {
   font-family: "Inter", sans-serif;
   line-height: 1;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 .container {
@@ -44,6 +45,43 @@ header {
   color: #48cce5;
   transition: all 0.3s;
   text-transform: capitalize;
+}
+
+.mobile {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 60%;
+  background-color: #1b1c52;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: 0.5s all ease-in-out;
+}
+
+.mobileToggle {
+  transform: translateX(0%);
+}
+#hamburger {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+}
+
+.close-btn {
+  display: none;
+}
+
+.mobile-list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  align-items: center;
+  gap: 4.8rem;
+  padding-top: 12.8rem;
 }
 
 /* .main-list-item::after {
@@ -176,6 +214,7 @@ header {
 .icon {
   width: 2.4rem;
   height: 2.4rem;
+  z-index: 100000;
 }
 
 .productions-desc {
@@ -264,6 +303,12 @@ span {
   gap: 1rem;
 }
 
+.generator-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .find-out-more {
   font-size: 1.8rem;
   text-transform: capitalize;
@@ -284,7 +329,11 @@ span {
   color: #fff;
 }
 
-.reviews {
+.carousel ul {
+  list-style: none;
+}
+
+.none {
   display: none;
 }
 
@@ -309,7 +358,7 @@ span {
   gap: 2rem;
 }
 
-.carousel-btn {
+.carousel-button {
   cursor: pointer;
   padding: 2rem;
   border: none;
@@ -325,7 +374,7 @@ span {
   transition: all 0.3s;
 }
 
-.carousel-btn:hover {
+.carousel-button:hover {
   background-color: #48cce5;
   border-color: currentColor;
   color: #000;
